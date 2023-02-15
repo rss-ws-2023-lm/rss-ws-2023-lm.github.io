@@ -1,1 +1,672 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/styles/lib/featherlight/release/featherlight.min.css">
+    <link rel="stylesheet" href="assets/styles/static/css/style.css">
+    <link rel="stylesheet" href="assets/styles/static/css/header.css">
+    <link rel="stylesheet" href="assets/styles/static/css/footer.css"> 
+    <link rel="shortcut icon" type="image/jpeg" href="assets/img/prl.jpg"/> 
+
+    <title>ICRA 2018 Workshop: Inference for Manipulation Task under Uncertainty: How to sense, plan, and act?</title>
+  </head>
+  <body>
+    <div id="prl-header">
+      <div class="container">
+        <h3 align="center">ICRA 2018 Workshop</h3>
+        <h1 class="unitmark" align="center">Inference for Manipulation Task under Uncertainty</h1>
+        <h3 align="center">May 5, 2020 | Paris, France</h3>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar">
+              <ul class="list-inline">
+                <li><a class="nav-item" href="#description">Home</a></li>
+                <li><a class="nav-item" href="#dates">Dates</a></li>
+                <li><a class="nav-item" href="#submissions">Submissions</a></li>
+                <li><a class="nav-item" href="#program">Program</a></li>
+                <li><a class="nav-item" href="#organizers">Organizers</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<div class="container">
+
+
+<hr>
+<h3 style="padding-bottom:5px;">Location</h3>
+<div class="row">
+  <div class="col-xs-12">
+  <p>Workshop: Main auditorium. </p>
+<!--     . <a href='http://www.roboticsconference.org/docs/campusmap.pdf'>Map of the workshop buildings</a> (we are in building 36).</p> 
+ -->  
+ <p>Poster: Hall 2-B (please setup only after 2.00 p.m.) </p>
+</div>
+</div>
+
+
+<hr>
+<h3 id="dates" style="padding-bottom:5px;">Important Dates</h3>
+<p>(deadlines are "anywhere on earth")</p>
+<div class="row">
+<div class="col-xs-12">
+<dl class="dl-horizontal">
+  <dt><strike>Aug 15</strike> Aug 31</dt> <dd>Extended abstract submission deadline</dd>
+  <dt>Sep 14</dt> <dd>Notification of acceptance</dd>
+  <dt>Sep 28</dt> <dd>Camera ready deadline for full paper</dd>
+  <dt>Oct 5</dt> <dd>Workshop</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="description" style="padding-bottom:5px;">Description</h3>
+<div class="row">
+  <div class="col-xs-12">
+  <p>
+    Motion planning has a rich and varied history. The bulk of the research in planning has focused on development of tractable algorithms with provable <i>worst-case performance guarantees</i>. In contrast, well-understood theory and practice in machine learning is concerned with <i>expected</i> performance (e.g. supervised learning). As affordable sensors, actuators and robots that navigate, interact and collect data proliferate, we are motivated to examine new algorithmic questions such as &quot What roles can statistical techniques play in overcoming traditional bottlenecks in planning?&quot, &quot How do we maintain worst-case performance guarantees while leveraging learning to improve expected performance?&quot and &quot How can common limitations inherited from data-driven methods (e.g. covariate shift) be mitigated while combining with traditional planning methods? &quot
+<!--     Robots are leaving the cages of the industrial manufacturing production lines and the safety of research labs, and moving into the unstructured environments of everyday life. From human-in-the-way to human-in-the-loop, modern robotics problems typically involve robot interactions with and around humans. Solving such problems requires research in complementary areas: <i>algorithmic robotics</i>, such as motion planning and machine learning, and <i>human-robot interaction</i> (HRI), such as cognitive modeling, intention recognition, and activity prediction. Both areas have much to contribute to each other in terms of methods, approaches, and insights, and yet the algorithmic robotics and human-robot interaction communities remain largely disjoint groups. There are four goals for this workshop: to (1) <i>expose approaches</i> from HRI that inform algorithmic models of humans, (2) <i>identify mathematical and algorithmic tools</i> to address HRI problems, (3) <i>encourage conversation</i> between researchers in the areas of HRI and fundamental algorithms for robotics, and (4) <i>raise a series of open questions</i> that fall in the intersection of algorithmic robotics and HRI.  -->
+  </p>
+  <p>
+   Both areas have much to contribute to each other in terms of methods, approaches, and insights, and yet motion planning and machine learning communities remain largely disjoint groups. There are four technical goals for this workshop in addition to encouraging dialogue between both communities:
+  <ul>
+  <li>Formalize paradigms in motion planning where statistical methods can play an essential role.</li>
+  <li>Identify learning algorithms that can alleviate planning bottlenecks.</li>
+  <li>Better understand common pitfalls of naively combining learning and planning and explore strategies for mitigation.</li>
+  <li>Arrive at a set of critical open questions that are at the intersection of the two fields. </li>
+  </ul>
+  </p>
+  </div>
+</div>
+
+<hr>
+<h3 id="dates" style="padding-bottom:5px;">Important Dates</h3>
+<p>(deadlines are "anywhere on earth")</p>
+<div class="row">
+<div class="col-xs-12">
+<dl class="dl-horizontal">
+  <dt><strike>Aug 15</strike> Aug 31</dt> <dd>Extended abstract submission deadline</dd>
+  <dt>Sep 14</dt> <dd>Notification of acceptance</dd>
+  <dt>Sep 28</dt> <dd>Camera ready deadline for full paper</dd>
+  <dt>Oct 5</dt> <dd>Workshop</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="submissions" style="padding-bottom:5px;">Submissions</h3>
+<div class="row">
+  <div class="col-xs-12">
+  <p>
+  We solicit <b>3 page extended abstracts</b> (page counts do not include references). On acceptance, the camera ready version can be a full paper <b>upto 6 pages</b> (excluding references). Submissions can include original research, position papers, and literature reviews that bridge the research areas for this workshop. Submissions will be externally reviewed, and selected based on technical content and ability to positively contribute to the workshop. All accepted contributions will be presented in interactive poster sessions. A subset of accepted contributions will be featured in the workshop as spotlight presentations.</p>
+
+  <p>The following list contains some areas of interest, but work in other areas is also welcomed:
+  <ul>
+    <li> machine learning in planning and related topics </li>
+    <li> learning representations for planning </li>
+    <li> planning with learnt models</li>
+    <li> learning heuristics in search </li>
+    <li> learning sampling techniques </li>
+    <li> resource allocation in planning </li>
+    <li> learning in sequential decision making settings </li>
+    <li> sample efficient learning </li>
+    <li> learning robust models to deal with distribution shifts </li>
+    <li> bayesian models and novelty detection in decision making </li>
+    <li> online learning in decision making </li>
+    <li> learning applied to task and motion planning </li>
+  </ul>
+  </p>
+
+  <p>
+    We will accept papers in the official IEEE templates (<a href='http://ras.papercept.net/conferences/support/tex.php'>LaTeX</a> and <a href='http://ras.papercept.net/conferences/support/word.php'>Word</a>). Submissions must meet page restrictions (maximum of 3 pages for extended abstracts and 6 pages for full papers), but can include additional pages as long as those pages only contain references. Reviewing will <i>not</i> be double blind. Please do not anonymize the submission.</p>
+
+  <p>
+  Papers and abstracts should be submitted through the following link: <a href="https://cmt3.research.microsoft.com/MLMP2018/" target="_ "> https://cmt3.research.microsoft.com/MLMP2018/ </a>. 
+  <p>
+
+  </div>
+</div>
+
+<hr>
+<h3 id="presentations" style="padding-bottom:5px;">Presentations</h3>
+<div class="row">
+  <div class="col-xs-12">
+  <p>
+  All accepted contributions will be presented in interactive poster sessions. We strongly recommend adhering to the following poster size:</p> 
+
+  <p><b>Potrait configuration: 32 inch (width) x (40 inch height)</b></p>
+
+  <p>We derived this size from the following data. Each poster stand has a usable area of 74 inch (width) x 38 inch (height). This area will be split among two posters appearing side by side. Unfortunately, ICRA organizers have notified us of limited availability of stands and space. Hence we kindly urge the presenters to adhere to the specified dimensions.</p>
+
+  <p> Note that the poster session will take place in a <b> different room </b> from the main workshop. This room is available from 2.00 p.m to 7.00 p.m. The presenters should setup soon after lunch and be near their stands. Please check the schedule for the room number and the timings.</p>
+
+  <p>Contributions selected for spotlight presentations should prepare a 5 minute talk. This will be followed by 1 minute of audience questions. During this time the next presenter should set up. All presenters should check in during the first coffee break and verify display settings. Please check the schedule for the presentation order. </p>
+
+  </div>
+</div>
+
+<hr>
+<h3 id="program" style="padding-bottom:5px;">Program</h3>
+
+ <h4>Location</h4>
+
+  <div class="col-xs-12">
+  <p>Workshop: Main auditorium. </p>
+<!--     . <a href='http://www.roboticsconference.org/docs/campusmap.pdf'>Map of the workshop buildings</a> (we are in building 36).</p> 
+ -->  
+ <p>Poster: Hall 2-B (please setup only after 2.00 p.m.) </p>
+</div> 
+
+  <div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+  <th>Time</th>
+  <th>Topic</th>
+  <th>Speaker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>08:45 - 09:00am</td>
+  <td>Introduction</td>
+  <td><a href="http://www.sanjibanchoudhury.com/" target="_blank">Sanjiban Choudhury</a></td>
+</tr>
+<tr>
+  <td>09:00 - 09:40am</td>
+  <td>Learning in Heuristic Search-based Planning <a href="assets/ppts/max_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> </td>
+  <td><a href="http://www.cs.cmu.edu/~maxim/" target="_blank">Maxim Likhachev</a></td>
+</tr>
+<tr>
+  <td>09:40 - 10:20am</td>
+  <td>Is motion planning overrated? <a href="assets/ppts/bohg_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> </td>
+  <td> <a href="https://am.is.tuebingen.mpg.de/person/jbohg/" target="_blank"> Jeannette Bohg</a> </td>
+</tr>
+<tr>
+  <td>10:20 - 11:00am</td>
+  <td>Robot Decision-Making under Uncertainty: From Data to Actions</td>
+  <td><a href="http://www.comp.nus.edu.sg/~dyhsu/" target="_blank">David Hsu</a></td>
+</tr>
+<tr style="background-color:lightgray">
+  <td>11:00 - 11:30am</td>
+  <td>Coffee break</td>
+  <td></td>
+</tr>
+<tr>
+  <td>11:30 - 12:10pm</td>
+  <td>Spotlight Talks</td>
+  <td></td>
+</tr>
+<tr>
+  <td>12:10 - 12:50pm</td>
+  <td>What can we learn from demonstrations? <a href="assets/ppts/marc_iros_mlmp_2018.pdf" target="_blank">[pdf]</td>
+  <td><a href="https://ipvs.informatik.uni-stuttgart.de/mlr/marc/index.html" target="_blank"> Marc Toussaint</a> </td>
+</tr>
+<tr>
+  <td>12:50 - 13:30pm</td>
+  <td>Robot Navigation: From Abilities to Capabilities <a href="assets/ppts/faust_iros_mlmp_2018.pdf" target="_blank">[pdf]</td>
+  <td><a href="http://www.afaust.info/" target="_blank"> Aleksandra Faust</a></td>
+</tr>
+<tr style="background-color:lightgray">
+  <td>13:30 - 14:30pm</td>
+  <td>Lunch</td>
+  <td></td>
+</tr>
+<tr>
+  <td>14:30 - 15:10pm</td>
+  <td>The Experienced Piano Movers Problem: New Piano. New Home. Same Mover. <a href="assets/ppts/sidd_iros_mlmp_2018.pdf" target="_blank">[pdf]</td>
+  <td><a href="https://homes.cs.washington.edu/~siddh/index.html" target="_blank"> Siddhartha Srinivasa</a> </td>
+</tr>
+<tr>
+  <td>15:10 - 15:50pm</td>
+  <td>Dealing with Dead Ends in Goal-Directed Reinforcement Learning</td>
+  <td><a href="https://www.microsoft.com/en-us/research/people/akolobov/" target="_blank"> Andrey Kolobov</a> </td>
+</tr>
+<tr>
+  <td>15:50 - 16:30pm</td>
+  <td>Machine Learning for Planning and Control <a href="assets/ppts/boots_iros_mlmp_2018.pdf" target="_blank">[pdf]</td>
+  <td><a href="https://www.cc.gatech.edu/~bboots3/" target="_blank"> Byron Boots</a> </td>
+</tr>
+<tr style="background-color:lightgray">
+  <td>16:30 - 17:00pm</td>
+  <td>Coffee break + Poster Session</td>
+  <td></td>
+</tr>
+<tr style="background-color:lightgray">
+  <td>17:00 - 17:30pm</td>
+  <td>Poster Session</td>
+  <td></td>
+</tr>
+<tr>
+  <td>17:30 - 18:30pm</td>
+  <td>Panel Discussions</td>
+  <td>All Invited Speakers</td>
+</tr>
+<!-- <tr style="background-color:lightgray">
+  <td>18:00 - 19:00pm</td>
+  <td>Poster Session</td>
+  <td></td>
+</tr> -->
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <h4>Invited Talks</h4>
+    <table>
+
+    <tr>
+    <td><img class="profile" src="assets/img/speakers/likachev.jpg" alt="likachev"> </td>
+    <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="http://www.cs.cmu.edu/~maxim/" target="_blank"> Maxim Likhachev</a>, Carnegie Mellon University </h4>
+         <h5 style="color:#373737;font-weight:bold">  Learning in Heuristic Search-based Planning </h5>
+         <p style="font-size:11px"> In this talk I will first briefly go over different ways how learning can be integrated into Search-based Planning. I will then talk in more details about our recent and ongoing work on speeding up Search-based Planning from experiences, our work on learning planning dimensions based on demonstrations and our ongoing work on integrating offline skill learning into Search-based Planning. I will mostly utilize examples from mobile manipulation to illustrate our work. </p>
+         <a href="assets/ppts/max_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+    </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/speakers/bohg.jpg" alt="bohg"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="https://am.is.tuebingen.mpg.de/person/jbohg/" target="_blank"> Jeannette Bohg</a>, Stanford University </h4>
+           <h5 style="color:#373737;font-weight:bold"> Is Motion Planning Overrated? </h5>
+           <p style="font-size:11px"> I present a fully-integrated system that emphasises the importance of continuous, real-time perception and its tight integration with reactive motion generation methods for robotic grasping and manipulation in a dynamic and uncertain environment. We extensively evaluated this system and compared against baselines in manipulation scenarios that exhibit either challenging workspace geometry or a dynamic environment. We found that pure feedback control brings us surprisingly far. But one can also easily construct scenarios that demand look-ahead over a longer time horizon. This system does not rely on any machine learning but is purely based on optimisation and model-based approaches. Nevertheless, these findings have implications for what kind of problems in motion generation we may want to address through machine learning. I will specifically focus on relaxing some of the assumptions that are made in the above manipulation system. I will present our most recent work on combining learned and analytical models within a model-predictive controller. The controller consumes a sequence of images as input and outputs an optimised sequence of actions over a certain time horizon. We show how this combination addresses the limitation of covariate shift found in purely data-driven methods. </p>
+           <a href="assets/ppts/bohg_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+
+      </td>
+    </tr>
+
+    <tr>
+      <td><img class="profile" src="assets/img/speakers/hsu.jpg" alt="hsu"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="http://www.comp.nus.edu.sg/~dyhsu/" target="_blank"> David Hsu</a>, National University of Singapore </h4>
+           <h5 style="color:#373737;font-weight:bold"> Robot Decision-Making under Uncertainty: From Data to Actions </h5>
+           <p style="font-size:11px"> Planning and learning are two primary approaches to robot intelligence. Planning enables us to reason about the consequence of immediate actions far into the future, but it requires accurate world models, which are often difficult to acquire in practice. Policy learning circumvents the need for models and learns from data a direct mapping from robot perceptual inputs to actions. However, without models, it is much more difficult to generalize and adapt learned policies to new contexts. In this talk, I will present our recent work on robust robot decision-making under uncertainty through planning, through learning, most importantly by integrating planning and learning. This integration (i) improves planning by learning a model optimized for a specific planning algorithm and (ii) improves learning by incorporating the planning algorithm as a structure prior. It seamlessly fuses model-based planning and model-free learning. </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/speakers/toussaint.jpg" alt="toussaint"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="https://ipvs.informatik.uni-stuttgart.de/mlr/marc/index.html" target="_blank"> Marc Toussaint</a>, University of Stuttgart </h4>
+           <h5 style="color:#373737;font-weight:bold"> What can we learn from demonstrations? </h5>
+           <p style="font-size:11px"> </p>
+           <a href="assets/ppts/marc_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+      </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/speakers/faust.jpg" alt="faust"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="http://www.afaust.info/" target="_blank"> Aleksandra Faust</a>, Google Brain </h4>
+           <h5 style="color:#373737;font-weight:bold"> Robot Navigation: From Abilities to Capabilities </h5>
+           <p style="font-size:11px"> Robot sensors, geometry, dynamics, and even type and quality of actuators define robot’s motion abilities. The abilities determine how the basic motion skills, such as reaching a goal or following paths without collisions, look for a particular robot. Robots with noiser sensors might move slower, while smaller robots might be able to fit through more narrow spaces. The basic motion skills can be learned through exploration and interaction with environments, independently from specific navigation tasks and environments. Once learned, the robot can use them as building blocks for more complex navigation capabilities in different environments. In this talk, we present learning robust, basic motion skills, short-distance goal navigation and path following motions, which take noisy sensor observations as inputs and output wheel velocities. Next, we examine building up from the basic motion skills. We discuss navigation through indoor buildings from floor maps, and navigation by following natural language instructions. </p>
+           <a href="assets/ppts/faust_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+      </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/organizers/srinivasa.jpg" alt="srinivasa"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="https://homes.cs.washington.edu/~siddh/index.html" target="_blank"> Siddhartha Srinivasa</a>, University of Washington </h4>
+           <h5 style="color:#373737;font-weight:bold"> The Experienced Piano Movers Problem: New Piano. New Home. Same Mover </h5>
+           <p style="font-size:11px"> </p>
+          <a href="assets/ppts/sidd_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+      </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/speakers/kolobov.jpg" alt="kolobov"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="https://www.microsoft.com/en-us/research/people/akolobov/" target="_blank"> Andrey Kolobov</a>, Microsoft Research </h4>
+           <h5 style="color:#373737;font-weight:bold"> Dealing with Dead Ends in Goal-Directed Reinforcement Learning </h5>
+           <p style="font-size:11px"> In many reinforcement learning scenarios, the agent strives to achieve a goal by ending up in a desirable state. Learning a good policy to get to it, in itself an involved problem due to world dynamics being generally unknown to the agent at the start, can be further complicated by the presence of dead ends --- states from which reaching the goal is impossible. Running into a dead end in the physical world means, at best, a premature end of an agent's mission, as in the case of Mars rover Spirit that got stuck in unexpectedly treacherous terrain. Even in simulated environments dead ends cause serious computational issues, slowing exploration and causing RL algorithms oblivious of them to produce unsafe policies. This talk will discuss principled optimization objectives that take dead ends into account, survey methods for maximizing them when MDP dynamics are known, and pose research questions about dealing with dead ends in model-free settings. </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td> <img class="profile" src="assets/img/speakers/boots.jpg" alt="boots"> </td>
+      <td> <h4 style="color:#373737; padding-bottom: 3px;"> <a href="https://www.cc.gatech.edu/~bboots3/" target="_blank"> Byron Boots</a>, Georgia Institute of Technology </h4>
+           <h5 style="color:#373737;font-weight:bold"> Machine Learning for Planning and Control </h5>
+           <p style="font-size:11px"> </p>
+           <a href="assets/ppts/boots_iros_mlmp_2018.pdf" target="_blank">[pdf]</a> 
+      </td>
+    </tr>
+
+    </table>
+  </div>
+</div>
+<br> <br>
+
+
+<!-- <h4 style="padding-bottom:5px;">Schedule Overview</h4>
+
+<p class="indent">The workshop will include:
+<ol type="i" style="padding-left: 3.0em;">
+  <li> seven invited keynote speakers: These talks will be given by experts whose research spans a range of disciplines and applications.</li>
+
+  <li> a panel: Experts from each domain will lead a group discussion on open questions at the intersection of planning and learning. In the first half, panelists will be asked to present open problems and areas of contention. The second half of the panel will be in the format of a discussion, where the participants will be encouraged to engage with the presented topics or extend them by suggesting their own.</li>
+
+  <li> spotlight talks: A selection of accepted papers will be presented in a 5-8 minute spotlight talk.</li>
+
+  <li> poster session: Poster sessions will continue during all breaks to enable participants to engage in deep discussion about the presented work. </li>
+</ol>
+</p> -->
+
+
+<h4>Spotlight Talks</h4>
+
+<div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+<table class="table">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Authors</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>#9</td>
+    <td><a href="assets/docs/9_CameraReadySubmission_IROS_2018_Workshop_MB_MPO_camera_ready.pdf" target="_blank">Model-Based Reinforcement Learning via Meta-Policy Optimization </a> </td>
+    <td>Jonas Rothfuss, Ignasi Clavera, John Schulman, Tamim Asfour and Pieter Abbeel</td>
+  </tr>
+  <tr>
+    <td>#11</td>
+    <td><a href="assets/docs/11_MLMP2018-Wissam_Bejjani.pdf" target="_blank">Learning a Value Function Based Heuristic for Physics Based Manipulation Planning in Clutter </a></td>
+    <td>Wissam Bejjani, Rafael Papallas, Matteo Leonetti and Mehmet Dogar</td>
+  </tr>
+  <tr>
+    <td>#13</td>
+    <td><a href="assets/docs/13_CameraReadySubmission_drl-in-handful-trials.pdf" target="_blank">Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models</a></td>
+    <td>Kurtland Chua, Roberto Calandra, Rowan McAllister and Sergey Levine</td>
+  </tr>
+  <tr>
+    <td>#22</td>
+    <td><a href="assets/docs/22_CameraReadySubmission_safe_rl_w_model_uncertainty_lutjens.pdf" target="_blank">Safe Reinforcement Learning with Model Uncertainty Estimates</a></td>
+    <td>Björn Lütjens, Michael Everett and Jonathan How </td>
+  </tr>
+  <tr>
+    <td>#26</td>
+    <td>Towards Learning Disentangled Objective Functions for Motion Planning with Value Iteration Networks</td>
+    <td>Jim Mainprice and Jie Zhong</td>
+  </tr>
+  <tr>
+    <td>#29</td>
+    <td><a href="assets/docs/29_CameraReadySubmission_root.pdf" target="_blank">Non-prehensile Rearrangement Planning with Learned Manipulation States and Actions </a></td>
+    <td>Joshua A Haustein, Isac Arnekvist, Johannes A. Stork, Kaiyu Hang and Danica Kragic</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<h4>Poster Presentations</h4>
+
+<div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+<table class="table">
+<thead>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Authors</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>#9</td>
+    <td><a href="assets/docs/9_CameraReadySubmission_IROS_2018_Workshop_MB_MPO_camera_ready.pdf" target="_blank">Model-Based Reinforcement Learning via Meta-Policy Optimization </a> </td>
+    <td>Jonas Rothfuss, Ignasi Clavera, John Schulman, Tamim Asfour and Pieter Abbeel</td>
+  </tr>
+  <tr>
+    <td>#10</td>
+    <td>Intention-based motion-adaptation using dynamical systems with human in the loop</td>
+    <td>Mahdi Khoramshahi, Aude Billard</td>
+  </tr>
+  <tr>
+    <td>#11</td>
+    <td><a href="assets/docs/11_MLMP2018-Wissam_Bejjani.pdf" target="_blank">Learning a Value Function Based Heuristic for Physics Based Manipulation Planning in Clutter </a></td>
+    <td>Wissam Bejjani, Rafael Papallas, Matteo Leonetti and Mehmet Dogar</td>
+  </tr>
+  <tr>
+    <td>#13</td>
+    <td><a href="assets/docs/13_CameraReadySubmission_drl-in-handful-trials.pdf" target="_blank">Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models</a></td>
+    <td>Kurtland Chua, Roberto Calandra, Rowan McAllister and Sergey Levine</td>
+  </tr>
+  <tr>
+    <td>#15</td>
+    <td><a href="assets/docs/15_CameraReadySubmission.pdf" target="_blank">Discontinuity-Sensitive Optimal Trajectory Learning by Mixture of Experts</a></td>
+    <td>Gao Tang and Kris Hauser</td>
+  </tr>
+  <tr>
+    <td>#16</td>
+    <td><a href="assets/docs/16_CameraReadySubmission_iros18villarreal_MLMP_cameraReady.pdf" target="_blank"> Deep Convolutional Terrain Assessment for Visual Reactive Footstep Correction on Dynamic Legged Robots  </a></td>
+    <td>Octavio Villarreal, Victor Barasuol, Marco Camurri, Michele Focchi, Luca Franceschi, Massimiliano Pontil, Darwin G. Caldwell and Claudio Semini</td>
+  </tr>
+  <tr>
+    <td>#17</td>
+    <td><a href="assets/docs/17_CameraReadySubmission_iros_workshop.pdf" target="_blank">Provable Infinite-Horizon Real-Time Planning for Repetitive Tasks</a></td>
+    <td>Fahad Islam, Oren Salzman and Maxim Likhachev</td>
+  </tr>
+  <tr>
+    <td>#18</td>
+    <td><a href="assets/docs/18_CameraReadySubmission.pdf" target="_blank">Learning to Utilize Context to Plan Beyond Sensing Horizon</a></td>
+    <td>Michael Everett and Jonathan How</td>
+  </tr>
+  <tr>
+    <td>#19</td>
+    <td><a href="assets/docs/19_CameraReadySubmission_Neural_End_to_End_Learning_of_Reach_for_Grasp_Ability_with_a_6_DoF_Robot_Arm__Using_Augmented_Reality_Training_Final.pdf" target="_blank"> Neural End-to-End Learning of Reach for Grasp Ability with a 6-DoF Robot Arm</a></td>
+    <td>Hadi Beik Mohammadi, Michael Görner, Manfred Eppe, Stefan Wermter, Matthias Kerzel and Mohammad Ali Zamani</td>
+  </tr>
+  <tr>
+    <td>#20</td>
+    <td><a href="assets/docs/20_CameraReadySubmission_learn2sample_iros_extended_abstract_compressed.pdf" target="_blank"> Learning Adaptive Sampling Distributions for Motion Planning by Self-Imitation </a></td>
+    <td>Ratnesh Madaan, Sam Zeng, Brian Okorn and Sebastian Sebastian Scherer</td>
+  </tr>
+  <tr>
+    <td>#21</td>
+    <td><a href="assets/docs/21_CameraReadySubmission_IROS-MLRMP-Planning-to-Poke.pdf" target="_blank">Planning to Poke: Sampling-based Planning with Self-Explored Neural Forward Models</a></td>
+    <td>Michael Görner, Lars Henning Kayser, Matthias Kerzel, Stefan Wermter and Jianwei  Zhang</td>
+  </tr>
+  <tr>
+    <td>#22</td>
+    <td><a href="assets/docs/22_CameraReadySubmission_safe_rl_w_model_uncertainty_lutjens.pdf" target="_blank">Safe Reinforcement Learning with Model Uncertainty Estimates</a></td>
+    <td>Björn Lütjens, Michael Everett and Jonathan How </td>
+  </tr>
+  <tr>
+    <td>#23</td>
+    <td><a href="assets/docs/23_CameraReadySubmission.pdf" target="_blank">Deep sequential models for sampling-based planning</a></td>
+    <td>Yen-Ling Kuo, Andrei Barbu and Boris Katz</td>
+  </tr>
+  <tr>
+    <td>#24</td>
+    <td><a href="assets/docs/24_CameraReadySubmission_180928_BAgger.pdf" target="_blank">BAgger: A Bayesian Algorithm for Safe and Query-efficient Imitation Learning</a></td>
+    <td>Constantin Cronrath, Emilio Jorge, John Moberg, Mats Jirstrand and Bengt Lennartson</td>
+  </tr>
+  <tr>
+    <td>#25</td>
+    <td><a href="assets/docs/25_CameraReadySubmission_rapidly-exploring-random.pdf" target="_blank">Rapidly Exploring Random Search Explorer</a></td>
+    <td>Aakriti K Upadhyay and Chinwe Ekenna</td>
+  </tr>
+  <tr>
+    <td>#26</td>
+    <td>Towards Learning Disentangled Objective Functions for Motion Planning with Value Iteration Networks</td>
+    <td>Jim Mainprice and Jie Zhong</td>
+  </tr>
+  <tr>
+    <td>#27</td>
+    <td><a href="assets/docs/27_CameraReadySubmission_iros_workshop_final_vxia.pdf" target="_blank">Learning structured transition models for multi-object manipulation</a></td>
+    <td>Victoria Xia, Zi Wang and Leslie Kaelbling</td>
+  </tr>
+    <tr>
+    <td>#28</td>
+    <td><a href="assets/docs/28_CameraReadySubmission_edge_cvae_final.pdf" target="_blank">Deep Conditional Generative Models for Heuristic Search on Graphs with Expensive-to-Evaluate Edges</a></td>
+    <td>Brian Hou and Siddhartha Srinivasa</td>
+  </tr>
+  <tr>
+    <td>#29</td>
+    <td><a href="assets/docs/29_CameraReadySubmission_root.pdf" target="_blank">Non-prehensile Rearrangement Planning with Learned Manipulation States and Actions </a></td>
+    <td>Joshua A Haustein, Isac Arnekvist, Johannes A. Stork, Kaiyu Hang and Danica Kragic</td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<!--
+<h3 id="speakers">Invited Speakers</h3>
+
+Invited speakers will continue to be updated as travel plans are finalized.
+<div class="row">
+<div class="col-xs-12">
+<p>
+<div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Affiliation</th>
+      <th>Topic</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://ca.linkedin.com/in/fran%C3%A7ois-boucher-3a511511">François Boucher</a></td>
+        <td>Kinova Robotics</td>
+        <td>Assistive Robotics: Improving independence with shared autonomy</td>
+      </tr>
+      <tr>
+        <td><a href="http://bretl.csl.illinois.edu/">Timothy Bretl</a></td>
+        <td>University of Illinois at Urbana-Champaign</td>
+        <td>Shared autonomy in prosthetic hands - design, analysis, and clinical application</td>
+      </tr>
+      <tr>
+        <td><a href="https://mems.duke.edu/faculty/mary-cummings">Missy Cummings</a></td>
+        <td>Duke University</td>
+        <td>human-unmanned vehicle interaction, human-autonomous system collaboration</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.iis.ee.ic.ac.uk/yiannis/webcontent/HomePage.html">Yiannis Demiris</a></td>
+        <td>Imperial College London</td>
+        <td>User Modelling for Adaptive Shared Autonomy in Adults and Children with Disabilities</td>
+      </tr>
+      <tr>
+        <td><a href="http://pages.cs.wisc.edu/~bilge/">Bilge Mutlu</td>
+        <td>University of Wisconsin-Madison</td>
+        <td>TBD</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.unm.edu/~oishi/">Meeko Oishi</a></td>
+        <td>University of New Mexico</td>
+        <td>The right information at the right time: Designing user-observable interfaces through sensor placement</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.mae.ucla.edu/veronica-santos/">Veronica Santos</a></td>
+        <td>UCLA</td>
+        <td>Artificial haptic intelligence for human-robot systems</td>
+      </tr>
+      <tr>
+        <td><a href="https://galois.com/team/peter-trautman/">Peter Trautman</a></td>
+        <td>Galois, Inc.</td>
+        <td>Shared autonomy architectures that are lower bounded in performance by the best performance of any member of the team: a first step towards a theory of shared autonomy</td>
+      </tr>
+    </tbody> 
+  </table>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+
+-->
+
+
+<h3 id="organizers">Organizers</h3>
+<div class="row">
+<div class="col-xs-12">
+
+  <h4>Organizing Committee</h4>
+
+  <table>
+  <tr>
+  <td><img class="profile" src="assets/img/organizers/daehyung.jpg" alt="daehyung"> </td>
+  <td> <h4> <a href="http://www.daehyungpark.com/" target="_blank"> Daehyung Park </a> </h4> <h4 style="color:#373737;"> Massachusetts Institute of Technology </h4></td>
+  <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+  <td><img class="profile" src="assets/img/organizers/daehyung.jpg" alt="daehyung"> </td>
+  <td> <h4> <a href="http://www.daehyungpark.com/" target="_blank"> Daehyung Park </a> </h4> <h4 style="color:#373737;"> Massachusetts Institute of Technology </h4></td>
+  </tr>
+      
+  <tr>
+  <td><img class="profile" src="assets/img/organizers/choudhury.jpg" alt="choudhury"> </td>
+  <td> <h4> <a href="http://www.sanjibanchoudhury.com/" target="_blank"> Sanjiban Choudhury </a> </h4> <h4 style="color:#373737;"> University of Washington </h4></td>
+  <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+  <td><img class="profile" src="assets/img/organizers/dey.jpg" alt="dey"> </td>
+  <td> <h4> <a href="http://www.debadeepta.com" target="_blank"> Debadeepta Dey </a> </h4> <h4 style="color:#373737;"> Microsoft Research </h4></td>
+  </tr>
+
+  <tr>
+  <td><img class="profile" src="assets/img/organizers/srinivasa.jpg" alt="srinivasa"> </td>
+  <td> <h4> <a href="https://homes.cs.washington.edu/~siddh/index.html" target="_blank"> Siddhartha Srinivasa </a> </h4> <h4 style="color:#373737;"> University of Washington </h4></td>
+  <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+  <td><img class="profile" src="assets/img/organizers/toussaint.jpg" alt="toussaint"> </td>
+  <td> <h4> <a href="https://ipvs.informatik.uni-stuttgart.de/mlr/marc/index.html" target="_blank"> Marc Toussaint </a> </h4> <h4 style="color:#373737;"> University of Stuttgart </h4></td>
+  </tr>
+
+  <tr>
+  <td><img class="profile" src="assets/img/organizers/boots.jpg" alt="boots"> </td>
+  <td> <h4> <a href="https://www.cc.gatech.edu/~bboots3/" target="_blank"> Byron Boots </a> </h4> <h4 style="color:#373737;"> Georgia Institute of Technology </h4></td>
+  <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+  </tr>
+
+  </table>
+<br> <br>
+
+<h4 style="padding-bottom:5px;">Program Committee</h4>
+  <p class="indent"> <a href="https://www.cs.rice.edu/~kavraki/" target="_blank"> Lydia Kavraki</a>, Rice University </p>
+  <p class="indent"> <a href="http://mime.oregonstate.edu/people/geoff-hollinger" target="_blank"> Geoff Hollinger</a>, Oregon State University</p>
+  <p class="indent"> <a href="https://web.stanford.edu/~pavone/" target="_blank"> Marco Pavone</a>, Stanford University</p>
+  <p class="indent"> <a href="https://www.cs.cmu.edu/~psodhi/" target="_blank"> Paloma Sodhi</a>, Carnegie Mellon University</p>
+  <p class="indent"> <a href="https://www.albany.edu/~CE392242/" target="_blank"> Chinwe Ekenna</a>, University of Albany</p>
+  <p class="indent"> <a href="http://www.afaust.info/" target="_blank"> Aleksandra Faust</a>, Google Brain</p>
+  <p class="indent"> <a href="https://www.microsoft.com/en-us/research/people/akolobov/" target="_blank"> Andrey Kolobov</a>, Microsoft Research</p>
+  <p class="indent"> <a href="http://www.orensalzman.com/" target="_blank"> Oren Salzman</a>, Carnegie Mellon University</p>
+  <p class="indent"> <a href="http://web.stanford.edu/~shushman/" target="_blank"> Shushman Choudhury</a>, Stanford University</p>
+  <p class="indent"> <a href="https://palmieri.github.io/" target="_blank"> Luigi Palmieri</a>, Bosch</p>
+  <p class="indent"> <a href="https://parasol.tamu.edu/~sthomas/" target="_blank"> Shawna Thomas</a>, Texas A&amp;M University</p>
+  <p class="indent"> <a href="http://www.cs.cmu.edu/~maxim/" target="_blank"> Maxim Likhachev</a>, Carnegie Mellon University</p>
+  <p class="indent"> <a href="http://www.comp.nus.edu.sg/~dyhsu/" target="_blank"> David Hsu</a>, National University of Singapore</p>
+  <p class="indent"> <a href="https://gilwoolee.github.io/" target="_blank"> Gilwoo Lee</a>, University of Washington</p>
+  <p class="indent"> <a href="https://am.is.tuebingen.mpg.de/person/jbohg" target="_blank"> Jeannette Bohg</a>, Stanford University</p>
+  <p class="indent"> <a href="http://www.peter-englert.net/" target="_blank"> Peter Englert</a>, University of Stuttgart</p>
+</div>
+</div>
+
+</div>
+
+<footer id="prl-footer" class="footer">
+    <div class="container">
+        <p class="text-inverse">The 
+        <a href="https://personalrobotics.cs.washington.edu/">Personal Robotics Lab</a> is part of the 
+        <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science and Engineering</a> at the
+        <a href="http://www.washington.edu/">University of Washington</a></p>
+    </div>
+</footer>
+    </body>
+</html>
